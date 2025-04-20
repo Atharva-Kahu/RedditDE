@@ -8,7 +8,7 @@ This project demonstrates a real-time data pipeline that extracts Spotify track 
 
 ## 🛠️ Tools & Technologies
 
-- **Spotify API** – Data source for real-time track metadata  
+- **Reddit API** – Data source for real-time track metadata  
 - **Apache Airflow** – Workflow orchestration and scheduling  
 - **Amazon S3** – Data lake for storing raw JSON  
 - **AWS Glue** – ETL tool to convert JSON to columnar format (Parquet)  
@@ -19,7 +19,7 @@ This project demonstrates a real-time data pipeline that extracts Spotify track 
 
 ```mermaid
 graph TD
-A[Spotify API] -->|Extract| B[Apache Airflow]
+A[Reddit API] -->|Extract| B[Apache Airflow]
 B -->|Store Raw JSON| C[S3 Bucket]
 C -->|Transform| D[AWS Glue]
 D -->|Load| E[Amazon Redshift]
@@ -29,7 +29,7 @@ E -->|Visualize| F[Power BI Dashboard]
 
 ## ✨ Features
 
-- **Automated ETL:** Airflow orchestrates regular extraction of data from Spotify API  
+- **Automated ETL:** Airflow orchestrates regular extraction of data from Reddit API  
 - **Cloud Storage:** Raw data stored in Amazon S3 for flexible access  
 - **ETL with AWS Glue:** Efficient transformation from JSON to Parquet  
 - **Analytics-ready Redshift:** Transformed data loaded into Redshift tables  
